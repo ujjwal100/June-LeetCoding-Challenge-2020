@@ -33,7 +33,7 @@ public:
     bool startsWith(string prefix) {
         Trie* node = this;
         for (char ch : prefix) {
-            ch -= 'a';
+            ch = ch-'a';
             if (!node->next[ch]) { return false; }
             node = node->next[ch];
         }
